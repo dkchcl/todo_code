@@ -9,7 +9,6 @@ resource "azurerm_key_vault" "kv" {
   access_policy {
     tenant_id = data.azurerm_client_config.tnt.tenant_id
     object_id = data.azurerm_client_config.tnt.object_id
-
    
     secret_permissions = [
       "Set",
