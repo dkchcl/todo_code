@@ -38,9 +38,11 @@ variable "sqlpassword" {
 }
 
 variable "username1" {
-  
+  description = "username for the VM"
+  type        = string  
 }
 
 variable "password1" {
-  
+  description = "password for the VM"
+  type        = string  
 }

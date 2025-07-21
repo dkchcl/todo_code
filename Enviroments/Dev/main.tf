@@ -138,6 +138,11 @@ module "vm" {
   key_vault            = var.kv_name
   username             = var.username
   password             = var.password
+  build_dir            = var.build_dir
+}
+
+output "vm_public_ip" {
+  value = module.vm.public_ip
 }
 
 module "vm1" {
@@ -156,6 +161,11 @@ module "vm1" {
   key_vault            = var.kv_name
   username             = var.username
   password             = var.password
+  build_dir            = var.build_dir
+}
+
+output "vm1_public_ip" {
+  value = module.vm1.public_ip
 }
 
 

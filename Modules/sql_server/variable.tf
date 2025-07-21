@@ -13,9 +13,18 @@ variable "sql_server_name" {
   type = string
 }
 
-variable "key_vault" {}
+variable "key_vault" {
+  description = "Key Vault name"
+  type = string
+}
 
-variable "username1" {}
+variable "username1" {
+  description = "Username for SQL server"
+  type = string
+}
 
-variable "password1" {}
+variable "password1" {
+  description = "Password for SQL server"
+  type = string
+}
 

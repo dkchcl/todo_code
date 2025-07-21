@@ -20,4 +20,10 @@ resource "azurerm_linux_virtual_machine" "vm" {
     sku       = var.sku
     version   = "latest"
   }
+  custom_data = base64encode(file("nginx-install.sh"))
 }
+
+output "public_ip" {
+  value = azurerm_public_ip.public_ip.ip_address
+}
+

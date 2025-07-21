@@ -23,7 +23,10 @@ variable "virtual_network_name" {
   type = string
 }
 
-variable "subnet" {}
+variable "subnet" {
+  description = "subnet"
+  type = string
+}
 
 variable "public_ip" {
   description = "public ip"

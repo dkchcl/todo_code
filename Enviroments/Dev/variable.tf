@@ -83,17 +83,35 @@ variable "vm_size" {
   type        = string
 }
 
-variable "publisher" {}
+variable "publisher" {
+  description = "OS Publisher"
+  type        = string
+}
 
-variable "offer" {}
+variable "offer" {
+  description = "OS Offer"
+  type        = string
+}
 
-variable "sku" {}
+variable "sku" {
+  description = "OS SKU"
+  type        = string
+}
 
-variable "caching" {}
+variable "caching" {
+  description = "caching type"
+  type        = string
+}
 
-variable "storage_account_type" {}
+variable "storage_account_type" {
+  description = "Storage account type"
+  type        = string
+}
 
-variable "kv_name" {}
+variable "kv_name" {
+  description = "Key Vault name"
+  type        = string
+}
 
 variable "username" {
   description = "username for the VM"
@@ -143,4 +161,9 @@ variable "sqlusername" {
 variable "sqlpassword" {
   description = "sql password"
   type = string
+}
+
+variable "build_dir" {
+  description = "Directory for build files"
+  type        = string
 }

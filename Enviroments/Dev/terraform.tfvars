@@ -32,3 +32,5 @@ sqlusername          = "sqluseradmin"
 sqlpassword          = "Bbpl@#2304"
 sql_database_name    = "todosqldb01"
 
+build_dir           = "build/"
+
