@@ -84,14 +84,14 @@ module "key_vault" {
   source              = "../Modules/key_vault"
   resource_group_name = "dkc-rg-01"
   location            = "central india"
-  kv_name             = "todovault231"
+  kv_name             = "todovault232"
 }
 
 module "key_vault_secret" {
   depends_on          = [module.key_vault]
   source              = "../Modules/key_vault_secret"
   resource_group_name = "dkc-rg-01"
-  kv_name             = "todovault231"
+  kv_name             = "todovault232"
   username            = "vmusername"
   adminusername       = "adminusername"
   password            = "vmpassword"
@@ -102,7 +102,7 @@ module "key_vault_secret1" {
   depends_on          = [module.key_vault]
   source              = "../Modules/key_vault_secret"
   resource_group_name = "dkc-rg-01"
-  kv_name             = "todovault231"
+  kv_name             = "todovault232"
   username            = "sqlusername"
   adminusername       = "sqladmin"
   password            = "sqlpassword"
@@ -115,7 +115,7 @@ module "sql_server_name" {
   resource_group_name = "dkc-rg-01"
   location            = "central india"
   sql_server_name     = "todovmssqlserver1"
-  key_vault           = "todovault231"
+  key_vault           = "todovault232"
   username            = "sqlusername"
   password            = "sqlpassword"
 }
@@ -135,13 +135,13 @@ module "vm" {
   location             = "central india"
   nic_name             = "nic1"
   vm_name              = "frontendvm"
-  size                 = "Standard_D2_v3"
+  size                 = "Standard_B1s"
   publisher            = "Canonical"
   offer                = "0001-com-ubuntu-server-jammy"
   sku                  = "22_04-lts"
   caching              = "ReadWrite"
   storage_account_type = "Standard_LRS"
-  key_vault            = "todovault231"
+  key_vault            = "todovault232"
   username             = "vmusername"
   password             = "vmpassword"
 }
@@ -153,13 +153,13 @@ module "vm1" {
   location             = "central india"
   nic_name             = "nic2"
   vm_name              = "backendvm"
-  size                 = "Standard_D2_v3"
+  size                 = "Standard_B1s"
   publisher            = "Canonical"
   offer                = "0001-com-ubuntu-server-jammy"
   sku                  = "22_04-lts"
   caching              = "ReadWrite"
   storage_account_type = "Standard_LRS"
-  key_vault            = "todovault231"
+  key_vault            = "todovault232"
   username             = "vmusername"
   password             = "vmpassword"
 }
