@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name   = "dkc-rg-01"
+    resource_group_name   = "dkcstaterg"
     storage_account_name  = "dkcstoragestate"
     container_name        = "dkccontainer"
     key                   = "terraform.tfstate"
