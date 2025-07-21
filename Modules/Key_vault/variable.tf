@@ -12,4 +12,3 @@ variable "kv_name" {
   description = "kv name"
   type = string
 }
-
