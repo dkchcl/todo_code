@@ -84,14 +84,14 @@ module "key_vault" {
   source              = "../Modules/key_vault"
   resource_group_name = "dkc-rg-01"
   location            = "central india"
-  kv_name             = "todovault234"
+  kv_name             = "todovault231"
 }
 
 module "key_vault_secret" {
   depends_on          = [module.key_vault]
   source              = "../Modules/key_vault_secret"
   resource_group_name = "dkc-rg-01"
-  kv_name             = "todovault234"
+  kv_name             = "todovault231"
   username            = "vmusername"
   adminusername       = "adminusername"
   password            = "vmpassword"
@@ -102,7 +102,7 @@ module "key_vault_secret1" {
   depends_on          = [module.key_vault]
   source              = "../Modules/key_vault_secret"
   resource_group_name = "dkc-rg-01"
-  kv_name             = "todovault234"
+  kv_name             = "todovault231"
   username            = "sqlusername"
   adminusername       = "sqladmin"
   password            = "sqlpassword"
@@ -115,7 +115,7 @@ module "sql_server_name" {
   resource_group_name = "dkc-rg-01"
   location            = "central india"
   sql_server_name     = "todovmssqlserver1"
-  key_vault           = "todovault234"
+  key_vault           = "todovault231"
   username            = "sqlusername"
   password            = "sqlpassword"
 }
@@ -141,7 +141,7 @@ module "vm" {
   sku                  = "22_04-lts"
   caching              = "ReadWrite"
   storage_account_type = "Standard_LRS"
-  key_vault            = "todovault234"
+  key_vault            = "todovault231"
   username             = "vmusername"
   password             = "vmpassword"
 }
@@ -159,7 +159,7 @@ module "vm1" {
   sku                  = "22_04-lts"
   caching              = "ReadWrite"
   storage_account_type = "Standard_LRS"
-  key_vault            = "todovault234"
+  key_vault            = "todovault231"
   username             = "vmusername"
   password             = "vmpassword"
 }
