@@ -114,7 +114,7 @@ module "sql_server_name" {
   source              = "../Modules/sql_server"
   resource_group_name = "dkc-rg-01"
   location            = "central india"
-  sql_server_name     = "todovmssqlserver1"
+  sql_server_name     = "todovmssqlserver3"
   key_vault           = "todovault234"
   username            = "sqlusername"
   password            = "sqlpassword"
@@ -124,8 +124,8 @@ module "sql_database" {
   depends_on          = [module.sql_server_name]
   source              = "../Modules/sql_database"
   resource_group_name = "dkc-rg-01"
-  sql_server_name     = "todovmssqlserver1"
-  sql_database_name   = "todovmssqldb"
+  sql_server_name     = "todovmssqlserver3"
+  sql_database_name   = "todovmssqldb1"
 }
 
 module "vm" {
