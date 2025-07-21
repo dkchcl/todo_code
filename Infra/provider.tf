@@ -5,14 +5,12 @@ terraform {
       version = "4.33.0"
     }
   }
-terraform {
   backend "azurerm" {
     resource_group_name   = "dkc-rg-01"
     storage_account_name  = "dkcstoragestate"
     container_name        = "dkccontainer"
     key                   = "terraform.tfstate"
   }
-}
 }
 
 provider "azurerm" {
